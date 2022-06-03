@@ -8,7 +8,10 @@
     "WORKSPACE_DIRECTORY": "${containerWorkspaceFolder}"
   },
   "extensions": ["timonwong.shellcheck", "esbenp.prettier-vscode"],
-  "mounts": [ "type=volume,target=/var/lib/docker" ],
+  "mounts": [
+    "type=volume,target=/var/lib/docker",
+    "type=bind,src=/sys/kernel/security,dst=/sys/kernel/security"
+  ],
   "settings": {
     "terminal.integrated.profiles.linux": {
       "zsh": {
